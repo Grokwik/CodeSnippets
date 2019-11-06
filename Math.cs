@@ -48,7 +48,7 @@ List<int> divisors(int number)
     var result = new List<int>();
     for(var div=1 ; div<number ; div++)
     {
-        if ((float)number/div == number/div)
+        if (number%div == 0)
         {
             result.Add(div);
         }
