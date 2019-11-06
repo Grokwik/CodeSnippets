@@ -1,11 +1,11 @@
 //
-//  Returns all the dividers of an number
+//  Returns all the divisors of an number
 //
-List<int> dividers(int product)
+List<int> divisors(int number)
 {
     var result = new List<int>();
     var div = 2;
-    var remain = product;
+    var remain = number;
     while (remain > 1)
     {
         if ((float)remain/div == remain/div)
