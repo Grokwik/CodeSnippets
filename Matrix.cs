@@ -24,6 +24,20 @@ void rotateMatrix90(int[][] input, int[][] output)
             output[i][j] = input[size-j-1][i];
 }
 
+
+int[][] rotateMatrix90(int[][] input)
+{
+    var size = input.Length;
+    var output = new int[size][];
+    for (var i=0 ; i<size ; i++)
+    {
+        output[i] = new int[size];
+        for (var j=0 ; j<size ; j++)
+            output[i][j] = input[size-j-1][i];
+    }
+    return output;
+}
+
 int[][] cloneMatrix(int[][] m)
 {
     var output = new int[m.Length][];
