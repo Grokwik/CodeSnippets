@@ -11,17 +11,23 @@ Convert.ToInt32(result, 2); //  binary (in form of a string) to dec
  */
 static string DecimalToXBase(int inputValue, int basex)
 {
-    var output = "";
-    var rem = 0;
-
     if (0 == inputValue)
         return "0";
 
+    int rem;
+    var output = "";
     while (inputValue > 0)
     {
-        rem = inputValue%basex;
-        inputValue = inputValue/basex;
-        output = rem + output;
+        rem = inputValue % basex;
+        inputValue /= basex;
+        if (rem > 10)
+        {
+            output = (char)('A' + (rem - 10)) + output;
+        }
+        else
+        {
+            output = rem + output;
+        }
     }
     return output;
 }
